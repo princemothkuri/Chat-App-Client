@@ -58,9 +58,10 @@ const Login = () => {
       setLoading(false);
       history.push("/chats");
     } catch (error) {
+      const errorMessage = error.response?.data?.message || "Network Error";
       toast({
         title: "Error Occured!",
-        description: error.response.data.message,
+        description: errorMessage,
         status: "error",
         duration: 5000,
         isClosable: true,
