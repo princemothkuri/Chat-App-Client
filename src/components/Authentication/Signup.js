@@ -51,7 +51,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "/api/user",
+        "https://chat-app-server-r2l6.onrender.com/api/user",
         {
           name,
           email,
